@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // WAP to separate digits and alphabets in the given number
+
+      str = prompt("Enter a string");
+      (num = ""), (alpha = "");
+      for (i of str) {
+        if (i >= 0 && i <= 9) {
+          num = num + i;
+        } else {
+          alpha += i;
+        }
+      }
+      console.log(num + alpha);
+
+      // WAP to print the number which are equal to each other
+
+      num = prompt("Enter a number: ");
+      (x = ""), (result = "");
+      for (i = 0; i < num.length; i++) {
+        x = num[i];
+        for (j = i + 1; j < num.length; j++) {
+          if (num[i] == num[j]) {
+            x = x + num[j];
+          }
+        }
+        if (!result.includes(x) && x.length > 1) result = result + x;
+      }
+      console.log(result);
+    </script>
+  </body>
+</html>
